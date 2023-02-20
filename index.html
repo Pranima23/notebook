@@ -1,0 +1,250 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://kit.fontawesome.com/244d461bf4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <button class="menu" id="menu" title="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </li>
+            <li>
+                <button class="settings">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <aside id="sidebar" class="sidebar">
+        <div class="top">
+            <div class="new">
+                <div class="new-drop-btn">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <div class="drop-content">
+                    <a href="">New Note</a>
+                    <a href="">New Notebook</a>
+                </div>
+            </div>
+            <form class="sort">
+                <label for="sort"><i id="sort-btn" class="fas fa-sort-amount-down"></i></label>
+                <select hidden name="sort" id="sort">
+                    <option value="all" selected>All</option>
+                    <option value="date">Date</option>
+                    <option value="name">Name</option>
+                </select>
+            </form>
+            <form id="search" class="search">
+                <label for="search"></label>
+                <input type="text" id="search" name="search" placeholder="Search...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <i id="search-btn" class="fas fa-search"></i>
+        </div>
+        <div class="toggle-btn">
+            <button class="notes-btn" id="notes-btn">Notes</button>
+            <button class="notebooks-btn" id="notebooks-btn">Notebooks</button>
+        </div>
+        <div class="toggle-content">
+            <div class="note-toggle" id="note-toggle">
+                <p class="no-of-notes"><var>6</var> notes</p>
+                <div class="notes-container">
+                    <ul class="note-list">
+                        <li>
+                            <a href="">
+                                <div class="note">
+                                    <div class="date">
+                                        <var>
+                                            <span class="day">
+                                                22
+                                            </span>
+                                            <br>
+                                            <span class="month">
+                                                Jan
+                                            </span>
+                                        </var>
+                                    </div>
+                                    <div class="note-content">
+                                        <h3>Title</h3>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo debitis nostrum
+                                            repellat aperiam nihil! Quasi, inventore ipsa. Cum sapiente, soluta qui
+                                            perspiciatis
+                                            vel nisi, esse temporibus voluptas consequatur quas unde?</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li><a href="">
+                                <div class="note">
+                                    <div class="date">
+                                        <var>
+                                            <span class="day">
+                                                22
+                                            </span>
+                                            <br>
+                                            <span class="month">
+                                                Jan
+                                            </span>
+                                        </var>
+                                    </div>
+                                    <div class="note-content">
+                                        <h3>Title</h3>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo debitis nostrum
+                                            repellat aperiam nihil! Quasi, inventore ipsa. Cum sapiente, soluta qui
+                                            perspiciatis
+                                            vel nisi, esse temporibus voluptas consequatur quas unde?</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="notebook-toggle" id="notebook-toggle">
+                <p class="no-of-notebooks"><var>4</var> notebooks</p>
+                <div class="notebooks-container">
+                    <ul class="notebook-list">
+                        <li>
+                            <a href=""><var>Notebook Title</var></a>
+                            <span><var>(5)</var></span>
+                        </li>
+                        <li>
+                            <a href=""><var>Notebook Title</var></a>
+                            <span><var>(5)</var></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main id='main-content'>
+        <div class="fix-content">
+
+            <header>
+                <ul>
+
+                    <li>
+                        <a class="appname" id="appname" href="#">
+                            <img src="notebook-logo.png" alt="AppName">
+                        </a>
+                    </li>
+                    <li>
+                        <button class="userprofile" id="userprofile">
+                            <img src="userprofile.jpg" alt="UserProfile">
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </li>
+                </ul>
+            </header>
+            <!--Note info-->
+            <ul class="note-info">
+
+                <li class="notebook">
+                    <a href=""><i class="fas fa-book"></i>
+                        Notebook</a>
+                </li>
+
+                <li class="date left-border">Mon. 12/28/2020</li>
+                <li class="wordcount left-border">2 words</li>
+                <li class="more left-border"><button class="no-border">
+                        <i class="fas fa-ellipsis-h float"></i>
+                    </button></li>
+            </ul>
+            <form action="">
+                <ul class="text-format">
+                    <li class="insert ">
+                        <label for="insert">Insert</label>
+                        <select name="insert" id="insert" hidden>
+                            <option value="">Insert</option>
+                            <option value="image">Image</option>
+                            <option value="table">Table</option>
+                            <option value="horizontal-line">Horizontal Line</option>
+                        </select>
+                    </li>
+                    <li class="font-family">
+                        <label for="font-family"></label>
+                        <select name="font-family" id="font-family">
+                            <option value="12">Serif</option>
+                            <option value="14">Sans-serif</option>
+                            <option value="16">Robota</option>
+                            <option value="18">Helvetica</option>
+                        </select>
+                    </li>
+                    <li class="font-size">
+                        <label for="font-size"></label>
+                        <select name="font-size" id="font-size">
+                            <option value="12">12pt</option>
+                            <option value="14">14pt</option>
+                            <option value="16">16pt</option>
+                            <option value="18">18pt</option>
+                        </select>
+                    </li>
+                    <li class="font-color">
+                        <i class="fas fa-palette"></i>
+                    </li>
+                    <ul class="font-style ">
+
+                        <li class="bold">
+                            <i class="fas fa-bold"></i>
+                        </li>
+                        <li class="italic ">
+                            <i class="fas fa-italic"></i>
+                        </li>
+                        <li class="underline ">
+                            <i class="fas fa-underline"></i>
+                        </li>
+                        <li class="strikethrough ">
+                            <i class="fas fa-strikethrough"></i>
+                        </li>
+
+                    </ul>
+                    <ul class="listing ">
+                        <li class="bullet">
+                            <i class="fas fa-list-ul"></i>
+                        </li>
+                        <li class="num ">
+                            <i class="fas fa-list-ol"></i>
+                        </li>
+                    </ul>
+                    </li>
+                    <li class="alignment">
+                        <i class="fas fa-align-left"></i>
+                    </li>
+                    <li class="link">
+                        <i class="fas fa-link"></i>
+                    </li>
+
+                </ul>
+            </form>
+        </div>
+
+        <div>
+            <form action="">
+                <h1>
+                    <label for="title"></label>
+                    <input type="text" placeholder="Title">
+
+                    <div class="text-container">
+                        <label for="body"></label>
+                        <textarea name="body" id="body" cols="30" rows="10"></textarea>
+                    </div>
+                </h1>
+            </form>
+        </div>
+        <ul class="save-info">
+            <li class="last-date">Last edited on Sun 01/22/2019</li>
+            <li class="save-change left-border">All changes saved</li>
+            </div>
+    </main>
+</body>
+<script src="/index.js"></script>
+
+</html>

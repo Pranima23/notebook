@@ -1,0 +1,461 @@
+/* rgb(59, 86, 98): rgb(59, 86, 98);
+// rgb(59, 86, 98): 	rgb(44, 53, 65);
+#8bbbbb: #8BBBBB;
+#e4eeef: #E4EEEF;
+#bbd: #BBD9D7;
+#c4c4c4: #C4C4C4; */
+
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body {
+    background-color: #E4EEEF;
+}
+
+var {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+i, button {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+
+/*Page Layout*/
+
+nav {
+    width: 30px;
+    float: left;
+    background-color: rgb(59, 86, 98);
+    color: #c4c4c4;
+    height: 100%;
+}
+
+aside {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 20%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #d6e4e6;
+    box-sizing: border-box; 
+    /* border-right: 2px solid #c4c4c4; */
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    float: left;
+    width: 75%;
+    background-color: #E4EEEF;
+    box-sizing: border-box;
+}
+
+aside::after, main::after {
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+
+/*css for nav*/
+nav ul {
+    list-style-type: none;
+    margin: auto;
+    width: 100%;
+    height: 128px;
+}
+
+nav ul li {
+    width: 100%;
+    margin: auto;
+    padding: 5px 8px;
+}
+
+nav ul li button.settings {
+    position: absolute;
+    bottom: 10px;
+}
+
+.appname img{
+    /* width: 128px; */
+    height: 56px;
+
+}
+
+/*css for aside*/
+.top {
+    display: block;
+    height: 80px;
+}
+
+.new {
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+.new-drop-btn {
+    padding: 5px;
+}
+
+.new .drop-content {
+    display: none;
+    background-color: rgb(59, 86, 98);
+    color: #C4C4C4;
+    position: absolute;
+    top: 0;
+    left: 25;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.new .drop-content a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 16px;
+}
+
+.new .drop-content a:first-child {
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.new:hover {
+    background-color: rgb(59, 86, 98);
+    color: white;
+}
+
+.new:hover .drop-content {
+    display: block;
+}
+
+.top form.search {
+    float: right;
+    width: 50%;
+    height:25px;
+    border: 1px solid;
+    border-radius: 8px;
+    display: none;
+}
+
+
+.top form.search + i {
+    padding: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.top form.search input, .top form.search button {
+    border: none;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: smaller;
+}
+
+.top form.sort {
+    padding: 5px;
+    float: right;
+}
+
+.top::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.toggle-btn{
+    margin: 10px 0 0;
+}
+
+.toggle-btn button {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    border: none;
+    font-size: 20px;
+}
+
+.toggle-btn .notes-btn{
+    border-bottom: 3px solid rgb(59, 86, 98);
+}
+
+.toggle-btn::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.toggle-content {
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+}
+
+.no-of-notes, .no-of-notebooks {
+    padding: 5px;
+}
+
+.note-toggle {
+    display: block;
+}
+
+.note-list li {
+    margin: 5px 0;
+    padding: 15px 5px;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background-color: #bbd9d7;
+    box-shadow: 0 0 10px #C4C4C4;
+    height: 100px;
+    overflow: hidden;
+}
+
+.note .date {
+    float: left;
+    width: 15%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.note .date .day {
+    font-size: larger;
+}
+
+.note .date .month {
+    font-size: medium;
+}
+
+.note .note-content {
+    float: left;
+    width: 85%;
+}
+
+.notebook-toggle {
+    display: none;
+    width: 100%;
+}
+
+.notebook-list {
+    background-color: #bbd9d7;
+    box-shadow: 0 0 10px #c4c4c4;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0;
+    list-style-type: none;
+}
+
+.notebook-list li {
+    margin: 10px 0;
+}
+
+
+/*css for main*/
+
+
+
+
+
+/* #font-size, #insert, #font-family{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+} */
+
+
+/*css for header*/
+
+header {
+    background-color: rgb(59, 86, 98);
+    margin: 0 0 10px;
+    padding: 0;
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    color: #C4C4C4;
+    position: sticky;
+    top: 0;
+}
+
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header ul li{
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+    height: 60px;
+    display: block;
+    box-sizing: border-box;
+    color: #e4eeef;
+    text-align: center;
+}
+
+.userprofile {
+    float: right;
+}
+
+.userprofile img{
+    height: auto;
+    width: 40px;
+    border-radius: 50%;
+    float: inline-start;
+    position: relative;
+    padding-right: 5px;
+}
+
+.userprofile i {
+    position: absolute;
+    top: 25;    
+}
+
+header ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* @media screen and (max-width:600px){
+    nav ul li{
+        float:none;
+        width:100%;
+    }
+} */
+
+
+/*css for note info and text format options*/
+
+.note-info, .text-format{
+    /* position: fixed; */
+
+    /* background-color: aqua; */
+    width: 100%;
+    padding: 0;
+    margin: 20px auto auto;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.note-info li, .text-format li{
+    list-style-type: none;
+}
+
+.note-info li, .text-format li{
+    float: left;
+    margin: 0;
+    padding: 3px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+.note-info > li, .text-format > li, .text-format ul li:last-child{
+    border-right: 1px solid black;
+    max-height: 25px;    
+}
+.note-info li:last-child, .text-format > li:last-child{
+    border: none;
+}
+
+.note-info li{
+    width: 25%;
+}
+.text-format li{
+    width: 8.33%;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+input[type=text]{
+    border: none;
+    padding: 10px;
+    width: inherit;
+    outline: none;
+    font-size: 1.1em;
+    margin: 20px 10px;
+    background-color: inherit;
+    box-sizing: border-box;
+}
+
+input::placeholder{
+    font-size: 1.2em;
+    
+}
+.text-container{
+    margin: 0 auto;
+    /* border-left: 3em solid  rgba(0, 0, 0, 0.6); */
+    border-radius: 20px;
+    height: 325px;
+    padding: 10px;
+    width: 95%;
+    background-color: #bbd9d7;
+    box-shadow: 0 0 10px #c4c4c4;
+    box-sizing: border-box;
+}
+textarea{
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: inherit;
+    font-size: 20px;
+}
+
+.save-info{
+    display: inline-block;
+    width: 95%;
+    margin: 10px auto;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    
+}
+
+.save-info li{
+    float: left;
+    width: 50%;
+    /* background-color: aqua; */
+    list-style-type: none;
+    box-sizing: border-box;
+}
+.last-date{
+    text-align: left;
+    border-right: 1px solid black;
+    /* width: 50%;
+    display: inline;
+    background-color: aqua; */
+}
+.save-change{
+    text-align: right;
+    /* width: 50%;
+    display: inline;
+    background-color: aqua; */
+}
